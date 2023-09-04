@@ -54,6 +54,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
