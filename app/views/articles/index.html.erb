@@ -1,0 +1,16 @@
+<h1>Articles listing</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Descriptirn</th>
+        <th>Actions</th>
+    </tr>
+    <% @articles.each do |article| %>
+    <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td><%= article_path article %> | edit | delete</td>
+    </tr>
+    <% end %>
+</table>
