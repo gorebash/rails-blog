@@ -7,12 +7,12 @@
         <div class="mb-3">
           <%= f.label :username, class: "col-2 col-form-label text-light" %>
           <%= f.text_field :username, class: "form-control shadow rounded", placeholder: "Username" %>
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
 
         <div class="mb-3">
           <%= f.label :email, class: "col-2 col-form-label text-light" %>
           <%= f.text_field :email, rows: 10, class: "form-control shadow rounded", placeholder: "User's email" %>
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
 
         <div class="mb-3">
@@ -20,7 +20,7 @@
           <%= f.text_field :password, rows: 10, class: "form-control shadow rounded", placeholder: "Password" %>
         </div>
 
-          <%= f.submit "Sign up", class: "btn btn-outline-light btn-lg" %>
+          <%= f.submit(@user.new_record? ? "Sign up" : "Update Account", class: "btn btn-outline-light btn-lg") %>
       <% end %>
     </div>
   </div>
