@@ -12,7 +12,8 @@
  * 
  */
 
+ //= link custom.css.scss
+
  //@import "bootstrap-sprockets";
  @import "bootstrap";
-
- 
+ @import "custom.scss"

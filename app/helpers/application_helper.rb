@@ -1,6 +1,8 @@
 module ApplicationHelper
   def gravatar_for(user, options = { size: 80 })
-    email_address = user.email.downcase
+    return unless user
+
+    email_address = user.email.downcase if user
     hash = Digest::MD5.hexdigest(email_address)
     size = options[:size]
     gravatar_url = "https://www.gravatar.com/avatar/#{hash}?s=#{size}"
